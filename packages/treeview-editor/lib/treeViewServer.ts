@@ -89,7 +89,7 @@ export class TreeViewServer {
     });
 
     await server.listen();
- 
+    server.openBrowser()
     server.printUrls();
   }
 }

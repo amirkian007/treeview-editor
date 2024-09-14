@@ -1,4 +1,3 @@
-// ThemeProvider.js
 import { DirectoryNode } from '@treeview-editor/folder-scaner'
 import { WebsocketTransport } from '@treeview-editor/web-socket'
 import React, { createContext, useContext, useRef, useState } from 'react'
