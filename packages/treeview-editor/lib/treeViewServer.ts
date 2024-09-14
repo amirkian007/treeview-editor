@@ -1,5 +1,3 @@
-#!/usr/bin/env vite-node --script
-
 import findFreePorts from "find-free-ports";
 import { fileURLToPath } from "node:url";
 import { createServer } from "vite";
@@ -29,7 +27,7 @@ export type ChanelEvent = {
   [K in keyof ChanelPayloads]: ChanelEventData<K>;
 }[keyof ChanelPayloads];
 
-class TreeViewClient {
+export class TreeViewServer {
  
   private wsServer!: WebsocketTransportServer;
   
@@ -47,7 +45,6 @@ class TreeViewClient {
       await this.startClientApp(socketServerPort)
     })
     this.wsServer.on('onMeesage',async (d:ChanelEvent)=>{
-      console.log(d)
       if(d.TYPE === 'DELETE_FILE'){
        await this.fileSystemController.delete(d.payload)
        this.updateClientTreeView()
@@ -96,6 +93,3 @@ class TreeViewClient {
     server.printUrls();
   }
 }
-
-const treeViewClient = new TreeViewClient();
-treeViewClient.startServer();

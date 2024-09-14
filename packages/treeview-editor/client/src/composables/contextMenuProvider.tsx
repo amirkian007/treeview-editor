@@ -50,7 +50,7 @@ const ContextMenuPrivider: React.FC<{ children: React.ReactNode }> = ({ children
   )
 }
 
-export function useContextMenu(node: DirectoryNode, cb: (status: TreeEditingORAddingStatus) => void, isRoot?: boolean) {
+export function useContextMenu(node: DirectoryNode, cb: (status: TreeEditingORAddingStatus) => void) {
   const { openContextMenu } = useContext(ContextMenuContext) as ContextMenuType
   const { dispatchEvent } = useFileSystemChannel()
   const [modificationStatus, setModificationStatus] = useState<TreeEditingORAddingStatus>(null)
@@ -90,7 +90,7 @@ export function useContextMenu(node: DirectoryNode, cb: (status: TreeEditingORAd
     }
   }
 
-  if (isRoot) {
+  if (node.isRoot) {
     contextItems = { ...contextMneuOptions['rootDirectory'] }
   } else {
     contextItems = { ...contextMneuOptions[node.type] }

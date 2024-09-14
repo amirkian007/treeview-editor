@@ -17,10 +17,15 @@
       "cache": false,
       "dependsOn": ["^typecheck"]
     },
-    "@treeview-editor/treeview-editor#dev": {
+    "@treeview-editor/treeview-editor#build": {
       "dependsOn": [
         "@treeview-editor/folder-scaner#build",
         "@treeview-editor/web-socket#build"
+      ]
+    },
+    "demo#demo-editor": {
+      "dependsOn": [
+        "@treeview-editor/treeview-editor#build"
       ]
     }
 

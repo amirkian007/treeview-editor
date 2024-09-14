@@ -52,7 +52,7 @@ export const TreeNode: React.FC<TreeNodeProps> = ({ node, depth = 1 }) => {
       {isAdding && (
         <button className="treeview-node" style={{ paddingLeft: (depth + 1) * 8 }}>
           <div className="icon-container" style={{ rotate: '90deg' }}>
-            {node.children && <Icon iconname="arrow"></Icon>}
+            {modificationStatus === 'adding_directory' && <Icon iconname="arrow"></Icon>}
           </div>
           <NodeEditInput onDone={addFile} node={{ ...node, ...{ name: '' } }}></NodeEditInput>
         </button>

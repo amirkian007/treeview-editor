@@ -8,6 +8,7 @@ export interface DirectoryNode {
   name: string
   path: string
   type: 'file' | 'directory'
+  isRoot?: boolean
 }
 
 export class FileSystemController {
@@ -18,7 +19,9 @@ export class FileSystemController {
   }
 
   public getDirTree(): DirectoryNode {
-    return dirTree(this.directoryPath, FileSystemController.options as any) as unknown as DirectoryNode
+    const dirTre =  dirTree(this.directoryPath, FileSystemController.options as any) as unknown as DirectoryNode
+    dirTre.isRoot = true
+    return dirTre
   }
 
   public async delete(filePath: string) {

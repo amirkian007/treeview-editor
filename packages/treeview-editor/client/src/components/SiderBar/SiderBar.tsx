@@ -16,7 +16,7 @@ export const SiderBar: React.FC = () => {
 }
 
 export const List: React.FC<{ treeView: DirectoryNode }> = ({ treeView }) => {
-  const { modificationStatus, handleContextMenu, addFile } = useContextMenu(treeView, () => {}, true)
+  const { modificationStatus, handleContextMenu, addFile } = useContextMenu(treeView, () => {})
   const isAdding = modificationStatus === 'adding_file' || modificationStatus === 'adding_directory'
 
   return (

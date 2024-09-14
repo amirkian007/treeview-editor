@@ -2,7 +2,7 @@
 import { DirectoryNode } from '@treeview-editor/folder-scaner'
 import { WebsocketTransport } from '@treeview-editor/web-socket'
 import React, { createContext, useContext, useRef, useState } from 'react'
-import { ChanelEvent } from '../../../lib/treeViewClient'
+import { ChanelEvent } from '../../../lib/treeViewServer'
 
 interface ServerActions {
   deleteFile: (path: string) => void

@@ -15,7 +15,7 @@
     "require": "./dist/index.cjs"
   },
   "scripts": {
-    "dev": "tsup lib/index.ts --dts --watch --format esm",
+    "dev": "tsup lib/index.ts --dts --format esm",
     "build": "tsup lib/index.ts --dts --format esm"
   },
   "dependencies": {
