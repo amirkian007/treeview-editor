@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev1": "vite",
-    "demo-editor" : "treeview-cli"
+    "demo-editor" : "pnpm i && treeview-cli"
   },
   "dependencies": {
     "vue": "^3.4.37"
