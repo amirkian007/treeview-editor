@@ -5,6 +5,7 @@
 ## About
 Treeview Editor is a CLI application that provides a live text editor for the project's directory, which is connected to the Node.js filesystem api.
 
+NOTE : <b> DO NOT USE PERSIAN WORDS!, </b>node js fs api sometimes throws an error on persian characters <br>
 NOTE : <ins> The package manager used in this projects is pnpm </ins> 
 ### install pnpm golbally
 ```
