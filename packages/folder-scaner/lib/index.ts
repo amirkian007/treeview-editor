@@ -44,6 +44,7 @@ export class FileSystemController {
 
   public write(filePath: string, name: string, isFolder: boolean = false) {
     const fullPath = path.join(filePath, name)
+    if(fs.existsSync(fullPath)) return
     if (isFolder) {
       fs.mkdirSync(fullPath, { recursive: true })
       console.log(`Created folder: ${filePath}`)
