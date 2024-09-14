@@ -8,6 +8,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "turbo run dev",
+    "demo-editor": "turbo run demo-editor",
     "build": "pnpm -r build",
     "precommit": "pretty-quick --staged",
     "commitmsg": "node scripts/verify.js",

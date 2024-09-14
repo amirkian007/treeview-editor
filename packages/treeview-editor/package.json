@@ -3,6 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "bin": {
+    "treeview-cli": "./dist/cli.js"
+  },
   "scripts": {
     "dev": "cross-env MODE=development vite-node --watch lib/cli.ts",
     "build": "pnpm run build-server && pnpm run build-client",
