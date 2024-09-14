@@ -15,7 +15,6 @@ export class WebsocketTransport {
     this.socket.onopen = () => {
       this.isReady = true
       console.log('websocket is ready')
-      // this.flush();
     }
     this.socket.onmessage = ({ data }) => {
       const event = typeof data === 'string' && isJSON(data) ? parse(data) : data
@@ -45,21 +44,4 @@ export class WebsocketTransport {
     this.socket.send(data)
   }
 
-  // private sendLater(event: ChanelEvent) {
-  //   this.buffer.push(event);
-  // }
-
-  // private sendNow(event: ChanelEvent) {
-  //   const data = stringify(event, {
-  //     maxDepth: 15,
-  //     allowFunction: false,
-  //   });
-  //   this.socket.send(data);
-  // }
-
-  // private flush() {
-  //   const { buffer } = this;
-  //   this.buffer = [];
-  //   buffer.forEach((event) => this.send(event));
-  // }
 }

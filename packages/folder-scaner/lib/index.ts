@@ -36,10 +36,9 @@ export class FileSystemController {
   }
 
   public rename(oldPath: string, newName: string) {
-    const parentDir = path.join(oldPath, '../', newName)
-    const newPath = path.join(parentDir, newName)
+    const newPath = path.join(oldPath, '../', newName)
 
-    fs.renameSync(oldPath, parentDir)
+    fs.renameSync(oldPath, newPath)
     console.log(`Renamed from ${oldPath} to ${newPath}`)
   }
 
