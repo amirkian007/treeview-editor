@@ -1,4 +1,4 @@
-#!/usr/bin/env vite-node --script
+#!/usr/bin/env node
 
 import { TreeViewServer } from "./treeViewServer";
 
@@ -10,4 +10,5 @@ async function run() {
         console.error(err)
     }
 }
+
 run()
