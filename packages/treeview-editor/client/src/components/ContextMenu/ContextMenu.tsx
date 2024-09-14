@@ -1,15 +1,6 @@
 import './ContextMenu.scss'
-
-interface ContextMneuPosition {
-  x: number
-  y: number
-}
-type ContextMenuProps = {
-  position: ContextMneuPosition
-  onClickOutSide: () => void
-  items: Record<string, any>
-}
-
+import { ContextMenuProps } from './types'
+ 
 export const ContextMenu: React.FC<ContextMenuProps> = ({ position, onClickOutSide, items }) => {
   function itemCLick(key: string) {
     items[key]()

@@ -1,18 +1,10 @@
 import { useState } from 'react'
-import { ButtonHTMLAttributes } from 'react'
-import { DirectoryNode } from '@treeview-editor/folder-scaner'
 import { NodeList } from '../NodeList/NodeList'
 import { NodeEditInput } from '../NodeEditInput/NodeEditInput'
 import { Icon } from '../Icon/Icon'
 import { TreeEditingORAddingStatus, useContextMenu } from '../../composables/contextMenuProvider'
+import type { TreeNodeProps, TreeNodeStatus } from './types'
 import './TreeNode.scss'
-
-type TreeNodeProps = ButtonHTMLAttributes<HTMLButtonElement> & {
-  node: DirectoryNode
-  depth?: number
-}
-
-type TreeNodeStatus = 'open' | 'closed'
 
 export const TreeNode: React.FC<TreeNodeProps> = ({ node, depth = 1 }) => {
   const [childrenStatus, setChildrenStatus] = useState<TreeNodeStatus>('closed')
