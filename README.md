@@ -10,9 +10,14 @@ NOTE : <ins> The package manager used in this projects is pnpm </ins>
 ```
 npm i pnpm -g
 ```
-## run demo
+### Install Dependencies
 ```
-pnpm i && pnpm run demo-editor
+pnpm i 
+```
+## run demo
+this commands first builds the Treeview-editor packages and then runs the demo.
+```
+pnpm run demo-editor
 ```
 ## run build
 
@@ -20,7 +25,7 @@ pnpm i && pnpm run demo-editor
 pnpm run build
 ```
 
-## run debuging
+## debuging
 
 ```
 pnpm run dev
