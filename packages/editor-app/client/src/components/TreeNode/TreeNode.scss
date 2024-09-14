@@ -1,0 +1,22 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.treeview-node {
+  @include button-reset;
+  @include flex-center;
+  @include transition(background-color);
+  height: $node-height;
+  gap: 4px;
+  text-align: left;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  &:hover {
+    background-color: $hover-bg;
+  }
+}
+.icon-container {
+  width: $icon-width;
+  @include flex-center;
+}

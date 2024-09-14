@@ -1,0 +1,24 @@
+{
+  "name": "@treeview-editor/folder-scaner",
+  "version": "0.0.1",
+  "type": "module",
+  "files": [
+    "dist",
+    "index.d.ts"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "import": "./dist/index.js",
+    "require": "./dist/index.cjs"
+  },
+  "scripts": {
+    "dev": "tsup lib/index.ts --dts --watch --format esm",
+    "build": "tsup lib/index.ts --dts --format esm"
+  },
+  "dependencies": {
+    "directory-tree": "^3.5.2"
+  }
+}

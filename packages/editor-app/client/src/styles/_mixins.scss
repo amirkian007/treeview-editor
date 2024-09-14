@@ -1,0 +1,25 @@
+@mixin transition($properties, $duration: 0.3s) {
+  transition: $properties $duration;
+}
+
+@mixin box-shadow($shadow) {
+  box-shadow: $shadow;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin button-reset {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+@mixin context-button-hover($hover-color) {
+  &:hover {
+    background-color: $hover-color;
+  }
+}

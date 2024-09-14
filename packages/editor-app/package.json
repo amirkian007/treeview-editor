@@ -1,0 +1,34 @@
+{
+  "name": "editor-app-r",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "cross-env MODE=development vite-node --watch lib/treeViewClient.ts",
+    "build": "pnpm run build-server && pnpm run build-client",
+    "build-server": "tsup-node lib/treeViewClient.ts --tsconfig tsconfig.node.json --dts --format esm",
+    "build-client": "tsc -b && vite build"
+  },
+  "dependencies": {
+    "@treeview-editor/folder-scaner": "workspace:*",
+    "@treeview-editor/web-socket": "workspace:*",
+    "find-free-ports": "^3.1.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.9.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "eslint": "^9.9.0",
+    "eslint-plugin-react-hooks": "^5.1.0-rc.0",
+    "eslint-plugin-react-refresh": "^0.4.9",
+    "globals": "^15.9.0",
+    "nodemon": "^3.1.4",
+    "sass": "^1.78.0",
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^8.0.1",
+    "vite": "^5.4.1"
+  }
+}

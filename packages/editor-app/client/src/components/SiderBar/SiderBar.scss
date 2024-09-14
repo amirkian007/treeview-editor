@@ -1,0 +1,14 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.treeview-asidebar {
+    @include box-shadow($box-shadow);
+    position: fixed;
+    width: $aside-width;
+    left: 0;
+    height: 100vh;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}

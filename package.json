@@ -1,0 +1,27 @@
+{
+  "name": "@treeview-editor/root",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "author": "Amirkian adl",
+  "license": "MIT",
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "pnpm -r build",
+    "precommit": "pretty-quick --staged",
+    "commitmsg": "node scripts/verify.js",
+    "prepare": "husky install .husky"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.4",
+    "cross-env": "^7.0.3",
+    "husky": "^9.1.6",
+    "prettier": "^3.3.3",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.2.4",
+    "turbo": "1.10.16",
+    "typescript": "^5.4.5",
+    "vite-node": "^2.1.0"
+  }
+}

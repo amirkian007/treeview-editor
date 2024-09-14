@@ -1,0 +1,28 @@
+{
+  "name": "@treeview-editor/web-socket",
+  "version": "0.0.1",
+  "type": "module",
+  "files": [
+    "dist",
+    "lib"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "import": "./dist/index.js",
+    "require": "./dist/index.cjs"
+  },
+  "scripts": {
+    "dev": "tsup lib/index.ts --dts --watch --format esm",
+    "build": "tsup lib/index.ts --dts --format esm"
+  },
+  "dependencies": {
+    "telejson": "^7.2.0",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/ws": "^8.5.12"
+  }
+}

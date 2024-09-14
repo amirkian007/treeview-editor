@@ -1,0 +1,10 @@
+
+.node-childrenWrapper {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    &:first-child {
+      flex: 1;
+    }
+}
